@@ -1,0 +1,170 @@
+{
+  "name": "KPrepublic BM68 RGB Rev2",
+  "vendorId": "0x4B50",
+  "productId": "0x1131",
+  "keycodes": ["qmk_lighting"],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2],
+              "options": [
+                ["00. OFF",                        0],
+                ["01. SOLID_COLOR",                1],
+                ["02. BREATHING",                  2],
+                ["03. BAND_SAT",                   3],
+                ["04. BAND_VAL",                   4],
+                ["05. CYCLE_ALL",                  5],
+                ["06. CYCLE_LEFT_RIGHT",           6],
+                ["07. CYCLE_UP_DOWN",              7],
+                ["08. RAINBOW_MOVING_CHEVRON",     8],
+                ["09. JELLYBEAN_RAINDROPS",        9],
+                ["10. HUE_BREATHING",             10],
+                ["11. MATRIX_PIXEL_RAIN",         11],
+                ["12. MATRIX_PIXEL_FLOW",         12],
+                ["13. MATRIX_PIXEL_FRACTAL",      13],
+                ["14. TYPING_HEATMAP",            14],
+                ["15. SOLID_REACTIVE",            15],
+                ["16. SOLID_REACTIVE_MULTIWIDE",  16],
+                ["17. SOLID_REACTIVE_MULTICROSS", 17],
+                ["18. SOLID_REACTIVE_MULTINEXUS", 18],
+                ["19. MULTISPLASH",               19],
+                ["20. SOLID_MULTISPLASH",         20],
+                ["21. MATRIX_RIVERFLOW",          21]
+              ]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 0",
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 180],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} > 0",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "matrix": {"rows": 5, "cols": 15},
+  "layouts": {
+    "keymap": [
+      [
+        {"c": "#aaaaaa"},
+        "0,0",
+        {"c": "#cccccc"},
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5",
+        "0,6",
+        "0,7",
+        "0,8",
+        "0,9",
+        "0,10",
+        "0,11",
+        "0,12",
+        {"c": "#777777", "w": 2},
+        "0,13",
+        "0,14"
+      ],
+      [
+        {"w": 1.5},
+        "1,0",
+        {"c": "#cccccc"},
+        "1,1",
+        "1,2",
+        "1,3",
+        "1,4",
+        "1,5",
+        "1,6",
+        "1,7",
+        "1,8",
+        "1,9",
+        "1,10",
+        "1,11",
+        "1,12",
+        {"w": 1.5},
+        "1,13",
+        {"c": "#777777"},
+        "1,14"
+      ],
+      [
+        {"w": 1.75},
+        "2,0",
+        {"c": "#cccccc"},
+        "2,2",
+        "2,3",
+        "2,4",
+        "2,5",
+        "2,6",
+        "2,7",
+        "2,8",
+        "2,9",
+        "2,10",
+        "2,11",
+        "2,12",
+        {"c": "#aaaaaa", "w": 2.25},
+        "2,13",
+        {"c": "#777777"},
+        "2,14"
+      ],
+      [
+        {"w": 2.25},
+        "3,1",
+        {"c": "#cccccc"},
+        "3,2",
+        "3,3",
+        "3,4",
+        "3,5",
+        "3,6",
+        "3,7",
+        "3,8",
+        "3,9",
+        "3,10",
+        "3,11",
+        {"c": "#777777", "w": 1.75},
+        "3,12",
+        "3,13",
+        "3,14"
+      ],
+      [
+        {"w": 1.25},
+        "4,0",
+        {"w": 1.25},
+        "4,1",
+        {"w": 1.25},
+        "4,2",
+        {"c": "#aaaaaa", "w": 6.25},
+        "4,6",
+        {"c": "#777777"},
+        "4,9",
+        "4,10",
+        "4,11",
+        "4,12",
+        "4,13",
+        "4,14"
+      ]
+    ]
+  }
+}
+  
