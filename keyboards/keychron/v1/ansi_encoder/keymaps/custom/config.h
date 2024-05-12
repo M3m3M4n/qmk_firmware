@@ -1,5 +1,8 @@
 #pragma once
 
+#define OS_DETECTION_KEYBOARD_RESET
+#define OS_DETECTION_DEBOUNCE 200
+
 #ifdef RGB_MATRIX_ENABLE
 #  undef  RGB_DISABLE_WHEN_USB_SUSPENDED
 #  define RGB_DISABLE_WHEN_USB_SUSPENDED true // turn off effects when suspended

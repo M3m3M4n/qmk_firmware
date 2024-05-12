@@ -90,6 +90,21 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 
+bool process_detected_host_os_user(os_variant_t detected_os) {
+  switch (detected_os) {
+    case OS_MACOS:
+    case OS_IOS:
+      layer_move(LAYER_MAC);
+      break;
+    case OS_WINDOWS:
+    case OS_LINUX:
+    case OS_UNSURE:
+      layer_move(LAYER_BASE);
+      break;
+  }
+  return false;
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
 #if defined(RGB_MATRIX_ENABLE)
